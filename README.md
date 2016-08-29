@@ -1,24 +1,9 @@
-# README
+# Go Surf (Rails 5, Ruby 2.3.0)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The main purpose of this repo is to create a Rails apps that has lots of iterations.
 
-Things you may want to cover:
+I wanted to use a topic that I found interesting, so it is based around where I have and where I want to go surfing.
 
-* Ruby version
+In the long term I am aiming to use this idea to create sites/apps in other languages and/or add other things to this site (e.g. react).
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I am also going to endeavour to document what I do and maybe make it into some sort of tutorial or learning resource to help people get started into Rails.

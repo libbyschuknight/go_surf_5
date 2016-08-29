@@ -1,0 +1,10 @@
+<h1>Surf Spots</h1>
+
+<% @surf_spots.each do | surf_spot | %>
+  <h2> <%= surf_spot.name %> </h2>
+  <%= surf_spot.place %>
+  <%= surf_spot.region
+   %>
+  <%= surf_spot.stoke_rating %>
+  <%= link_to "Show", surf_spot_path(surf_spot) %>
+<% end %>
