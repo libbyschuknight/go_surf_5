@@ -1,5 +1,8 @@
 <h1>Surf Spots</h1>
 
+<%= link_to "Go Surf Spots", controller: "surf_spots" %>
+<%= link_to "New Surf Spot", new_surf_spot_path %>
+
 <% @surf_spots.each do | surf_spot | %>
   <h2> <%= surf_spot.name %> </h2>
   <%= surf_spot.place %>
