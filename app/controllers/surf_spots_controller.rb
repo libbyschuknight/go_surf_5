@@ -11,6 +11,20 @@ class SurfSpotsController < ApplicationController
     redirect_to @surf_spot
   end
 
+  def edit
+    @surf_spot = SurfSpot.find(params[:id])
+  end
+
+  def update
+    @surf_spot = SurfSpot.find(params[:id])
+
+    if @surf_spot.update(surf_spot_params)
+      redirect_to @surf_spot
+    else
+      render 'edit'
+    end
+  end
+
   def show
     @surf_spot = SurfSpot.find(params[:id])
   end

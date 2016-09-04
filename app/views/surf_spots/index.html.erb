@@ -1,6 +1,5 @@
 <h1>Surf Spots</h1>
 
-<%= link_to "Go Surf Spots", controller: "surf_spots" %>
 <%= link_to "New Surf Spot", new_surf_spot_path %>
 
 <% @surf_spots.each do | surf_spot | %>
@@ -10,4 +9,5 @@
    %>
   <%= surf_spot.stoke_rating %>
   <%= link_to "Show", surf_spot_path(surf_spot) %>
+  <%= link_to "Update", edit_surf_spot_path(surf_spot) %>
 <% end %>

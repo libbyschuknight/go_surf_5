@@ -1,0 +1,49 @@
+<h1>Update Surf Spot</h1>
+
+<%= form_for :surf_spot, url: surf_spot_path(@surf_spot), method: :patch do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.label :place %><br>
+    <%= f.text_field :place %>
+  </p>
+
+  <p>
+    <%= f.label :region %><br>
+    <%= f.text_field :region %>
+  </p>
+
+  <p>
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </p>
+
+  <p>
+    <%= f.label :latitude %><br>
+    <%= f.number_field :latitude, step: :any %>
+  </p>
+
+  <p>
+    <%= f.label :longitude %><br>
+    <%= f.number_field :longitude, step: :any %>
+  </p>
+
+  <p>
+    <%= f.label :stoke_rating %><br>
+    <%= f.number_field :stoke_rating %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to "Back", surf_spots_path %>
