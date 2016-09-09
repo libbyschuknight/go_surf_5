@@ -9,5 +9,6 @@
    %>
   <%= surf_spot.stoke_rating %>
   <%= link_to "Show", surf_spot_path(surf_spot) %>
-  <%= link_to "Update", edit_surf_spot_path(surf_spot) %>
+  <%= link_to "Edit", edit_surf_spot_path(surf_spot) %>
+  <%= link_to "Delete", surf_spot_path(surf_spot), method: :delete, data: { confirm: "You really want to delete this surf spot??" } %>
 <% end %>

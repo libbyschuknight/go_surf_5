@@ -1,7 +1,19 @@
 class SurfSpotsController < ApplicationController
 
+  def index
+    @surf_spots = SurfSpot.all
+  end
+
+  def show
+    @surf_spot = SurfSpot.find(params[:id])
+  end
+
   def new
     @surf_spot = SurfSpot.new
+  end
+
+  def edit
+    @surf_spot = SurfSpot.find(params[:id])
   end
 
   def create
@@ -9,10 +21,6 @@ class SurfSpotsController < ApplicationController
 
     @surf_spot.save
     redirect_to @surf_spot
-  end
-
-  def edit
-    @surf_spot = SurfSpot.find(params[:id])
   end
 
   def update
@@ -25,12 +33,11 @@ class SurfSpotsController < ApplicationController
     end
   end
 
-  def show
+  def destroy
     @surf_spot = SurfSpot.find(params[:id])
-  end
+    @surf_spot.destroy
 
-  def index
-    @surf_spots = SurfSpot.all
+    redirect_to surf_spots_path
   end
 
   def surf_spot_params
@@ -41,7 +48,7 @@ class SurfSpotsController < ApplicationController
       :region,
       :country,
       :latitude,
-      :longtitude,
+      :longitude,
       :stoke_rating
     )
   end
