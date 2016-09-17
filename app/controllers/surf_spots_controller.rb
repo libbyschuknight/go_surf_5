@@ -1,5 +1,4 @@
 class SurfSpotsController < ApplicationController
-
   def index
     @surf_spots = SurfSpot.all
   end
@@ -29,7 +28,7 @@ class SurfSpotsController < ApplicationController
     if @surf_spot.update(surf_spot_params)
       redirect_to @surf_spot
     else
-      render 'edit'
+      render "edit"
     end
   end
 
@@ -52,5 +51,4 @@ class SurfSpotsController < ApplicationController
       :stoke_rating
     )
   end
-
 end
