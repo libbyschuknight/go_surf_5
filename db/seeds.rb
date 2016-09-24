@@ -1,7 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+SurfSpot.create!([
+  {name: "Ngaranui Beach", description: "The long flat sandy bottomed beach offers nice surfing options for beginners to expert surfers. All year long, the beach  provides the perfect environment for our beginners to intermediate lessons. It is Raglans’ main swimming beach, patrolled by lifeguards with surfing allowed all down the beach on either side of the safety flags. This the best options for most surfers with limited experience.", place: "Raglan", region: "Waikato", country: "New Zealand", latitude: -37.818446, longitude: 174.82833, stoke_rating: 7},
+  {name: "Lyall Bay", description: "Surf is great when it is on. The Airport End is where I surf the most and has a break of the wall. Other parts of the beach can be good at times.\r\nSoutherly swell, northerly wind.", place: "Wellington", region: "Wellington", country: "New Zealand", latitude: -41.328796, longitude: 174.803866, stoke_rating: 5},
+  {name: " Uretiti Beach", description: "This beach is in Bream Bay. Discovered while camping at the DOC campsite. Pretty cool surf beach for beginners, kind of where I first got into it. Oh and in summer it is nice and warm!!", place: "Bream bay", region: "Northland", country: "New Zealand", latitude: -35.934883, longitude: 174.462012, stoke_rating: 4}
+])
