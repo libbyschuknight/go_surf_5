@@ -10,4 +10,4 @@ In the long term I am aiming to use this idea to create sites/apps in other lang
 
 I am also going to endeavor to document what I do and maybe make it into some sort of tutorial or learning resource to help people get started into Rails.
 
-Note: September 2016 - I started this in Rails 4 but after the August 2016 RailsGirls Wgtn event I decided it might be more useful to do it in Rails 5. This repo is the Rails 5 version. 
+Note: September 2016 - I started this in Rails 4 but after the August 2016 RailsGirls Wgtn event I decided it might be more useful to do it in Rails 5. This repo is the Rails 5 version.
