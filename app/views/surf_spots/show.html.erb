@@ -37,5 +37,8 @@
   <%= @surf_spot.stoke_rating %>
 </p>
 
-<%= link_to "Update", edit_surf_spot_path(@surf_spot) %>
+<% if current_user.try(:admin?) %>
+  <%= link_to "Update", edit_surf_spot_path(@surf_spot) %>
+<% end %>
+
 <%= link_to "Back", surf_spots_path %>
