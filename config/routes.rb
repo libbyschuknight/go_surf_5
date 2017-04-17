@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   root "surf_spots#index"
 
   resources :surf_spots

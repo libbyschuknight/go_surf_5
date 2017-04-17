@@ -1,8 +1,6 @@
 <h1>Surf Spots</h1>
 
-<% if current_user.try(:admin?) %>
   <%= link_to "New Surf Spot", new_surf_spot_path %>
-<% end %>
 
 <% @surf_spots.each do | surf_spot | %>
   <h2> <%= surf_spot.name %> </h2>
@@ -12,9 +10,7 @@
   <%= surf_spot.stoke_rating %>
   <%= link_to "Show", surf_spot_path(surf_spot) %>
 
-  <% if current_user.try(:admin?) %>
     <%= link_to "Edit", edit_surf_spot_path(surf_spot) %>
     <%= link_to "Delete", surf_spot_path(surf_spot), method: :delete, data: { confirm: "You really want to delete this surf spot??" } %>
-  <% end %>
 
 <% end %>

@@ -33,8 +33,6 @@ gem "jbuilder", "~> 2.5"
 # Use to set up and maintain seed data (also for production https://rubygems.org/gems/seed_dump/versions/3.2.4)
 gem "seed_dump", "~> 3.2", ">= 3.2.4"
 
-gem "devise"
-
 group :development, :test do
   gem 'awesome_print', '~> 1.7'
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
