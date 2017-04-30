@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GoSurf5</title>
-    <%= csrf_meta_tags %>
-
+    <title>My Surf Spots</title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <%= render "layouts/navigation" %>
+    <%= render "layouts/messages" %>
+    <!--old delete  -->
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>
@@ -18,8 +20,12 @@
 
 
     <p class="navbar-text pull-right">
+    <!-- old delete -->
 
+    <div class="container">
+      <%= yield %>
+    </div>
 
-    <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
