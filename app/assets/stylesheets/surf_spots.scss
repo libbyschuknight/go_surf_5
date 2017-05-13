@@ -1,3 +1,19 @@
 // Place all the styles related to the SurfSpots controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.surf-spot-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+
+.surf-spot-name {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.surf-spot-body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
