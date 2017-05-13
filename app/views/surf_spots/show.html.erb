@@ -2,46 +2,46 @@
 <div class="well col-xs-8 col-xs-offset-2">
   <div class="center description">
     <%= simple_format(@surf_spot.description) %>
+  </div>
 
-    <p>
-      <strong>Place</strong>
-      <%= @surf_spot.place %>
-    </p>
+  <p>
+    <strong>Place</strong>
+    <%= @surf_spot.place %>
+  </p>
 
-    <p>
-      <strong>Region:</strong>
-      <%= @surf_spot.region %>
-    </p>
+  <p>
+    <strong>Region:</strong>
+    <%= @surf_spot.region %>
+  </p>
 
-    <p>
-      <strong>Country</strong>
-      <%= @surf_spot.country %>
-    </p>
+  <p>
+    <strong>Country</strong>
+    <%= @surf_spot.country %>
+  </p>
 
-    <p>
-      <strong>Latitude:</strong>
-      <%= @surf_spot.latitude %>
-    </p>
+  <p>
+    <strong>Latitude:</strong>
+    <%= @surf_spot.latitude %>
+  </p>
 
-    <p>
-      <strong>Longtitude</strong>
-      <%= @surf_spot.longitude %>
-    </p>
+  <p>
+    <strong>Longtitude</strong>
+    <%= @surf_spot.longitude %>
+  </p>
 
-    <p>
-      <strong>Rating:</strong>
-      <%= @surf_spot.stoke_rating %>
-    </p>
+  <p>
+    <strong>Rating:</strong>
+    <%= @surf_spot.stoke_rating %>
+  </p>
 
 
-    <div class="surf-spot-actions">
-      <%= link_to "Edit this spot", edit_surf_spot_path(@surf_spot), class: "btn btn-xs btn-primary" %>
-      <%= link_to "Delete this spot", surf_spot_path(@surf_spot),
-          method: :delete,
-          data: { confirm: "Are you sure you want to delete the spot?" },
-          class: "btn btn-xs btn-danger"
-      %>
-      <%= link_to "View all spots", surf_spots_path, class: "btn btn-xs btn-success" %>
-    </div>
+  <div class="surf-spot-actions">
+    <%= link_to "Edit this spot", edit_surf_spot_path(@surf_spot), class: "btn btn-xs btn-primary" %>
+    <%= link_to "Delete this spot", surf_spot_path(@surf_spot),
+        method: :delete,
+        data: { confirm: "Are you sure you want to delete the spot?" },
+        class: "btn btn-xs btn-danger"
+    %>
+    <%= link_to "View all spots", surf_spots_path, class: "btn btn-xs btn-success" %>
   </div>
 </div>
