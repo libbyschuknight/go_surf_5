@@ -1,11 +1,11 @@
 class SurfSpotsController < ApplicationController
+  before_action :set_surf_spot, only: [:show, :edit, :update, :destroy]
 
   def index
     @surf_spots = SurfSpot.all
   end
 
   def show
-    @surf_spot = SurfSpot.find(params[:id])
   end
 
   def new
@@ -13,32 +13,35 @@ class SurfSpotsController < ApplicationController
   end
 
   def edit
-    @surf_spot = SurfSpot.find(params[:id])
   end
 
   def create
     @surf_spot = SurfSpot.new(surf_spot_params)
 
-    @surf_spot.save
-    redirect_to @surf_spot
+    if @surf_spot.save
+      flash[:success] = "Surf spot was created."
+      redirect_to @surf_spot
+    else
+      render "new"
+    end
   end
 
   def update
-    @surf_spot = SurfSpot.find(params[:id])
-
-    if @surf_spot.update(surf_spot_params)
+    if set_surf_spot.update_attributes(surf_spot_params)
+      flash[:success] = "Sirf spot was updated."
       redirect_to @surf_spot
     else
-      render "edit"
+      render "new"
     end
   end
 
   def destroy
-    @surf_spot = SurfSpot.find(params[:id])
-    @surf_spot.destroy
-
+    set_surf_spot.destroy
+    flash[:danger] = "Surf spot was deleted."
     redirect_to surf_spots_path
   end
+
+  private
 
   def surf_spot_params
     params.require(:surf_spot).permit(
@@ -51,5 +54,9 @@ class SurfSpotsController < ApplicationController
       :longitude,
       :stoke_rating
     )
+  end
+
+  def set_surf_spot
+    @surf_spot = SurfSpot.find(params[:id])
   end
 end
