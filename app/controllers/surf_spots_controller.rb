@@ -2,7 +2,7 @@ class SurfSpotsController < ApplicationController
   before_action :set_surf_spot, only: [:show, :edit, :update, :destroy]
 
   def index
-    @surf_spots = SurfSpot.all
+    @surf_spots = SurfSpot.paginate(page: params[:page], per_page: 3)
   end
 
   def show
