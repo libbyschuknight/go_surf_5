@@ -10,17 +10,6 @@
   <body>
     <%= render "layouts/navigation" %>
     <%= render "layouts/messages" %>
-    <!--old delete  -->
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-
-
-    <p class="navbar-text pull-right">
-    <!-- old delete -->
 
     <div class="container">
       <%= yield %>
