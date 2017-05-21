@@ -3,7 +3,7 @@ class User < ApplicationRecord
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-  has_many :surf_spots
+  has_many :surf_spots, dependent: :destroy
 
   validates :username,
             presence: true,

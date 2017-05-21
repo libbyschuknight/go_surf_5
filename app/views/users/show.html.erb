@@ -8,11 +8,11 @@
 
 <h4 align="center"><%= @user.username %>'s surf spots</h4>
 <div class="center">
-  <%= will_paginate @user_surf_spots %>
+  <%= will_paginate @user_surf_spots, renderer: BootstrapPagination::Rails %>
 </div>
 
-<%= render "articles/article", object: @user_surf_spots %>
+<%= render "surf_spots/surf_spot", object: @user_surf_spots %>
 
 <div class="center">
-  <%= will_paginate @user_surf_spots %>
+  <%= will_paginate @user_surf_spots, renderer: BootstrapPagination::Rails %>
 </div>

@@ -1,15 +1,17 @@
 class SurfSpotsController < ApplicationController
   before_action :set_surf_spot, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, expect: [:index, :show]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
 
   def index
     @surf_spots = SurfSpot.paginate(page: params[:page], per_page: 3)
   end
 
-  def show
-  end
-
   def new
     @surf_spot = SurfSpot.new
+  end
+
+  def show
   end
 
   def edit
@@ -17,7 +19,7 @@ class SurfSpotsController < ApplicationController
 
   def create
     @surf_spot = SurfSpot.new(surf_spot_params)
-
+    @surf_spot.user = current_user
     if @surf_spot.save
       flash[:success] = "Surf spot was created."
       redirect_to @surf_spot
@@ -58,5 +60,12 @@ class SurfSpotsController < ApplicationController
 
   def set_surf_spot
     @surf_spot = SurfSpot.find(params[:id])
+  end
+
+  def require_same_user
+    if current_user != @surf_spot.user && !current_user.admin?
+      flash[:danger] = "You can only edit or delete your own surf spots."
+      redirect_to root_path
+    end
   end
 end
