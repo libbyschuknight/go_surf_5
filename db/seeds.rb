@@ -1,5 +1,4 @@
 User.create!([
-  {username: "Libby", email: "libbysk@gmail.com", password_digest: "$2a$10$7RJ8XWp1n3ETrXhfvU.auuYp57s59RQpgn12n508TOOKg5U4lPVbO", admin: false},
   {username: "jess", email: "jess@moo.com", password_digest: "$2a$10$DmU8jZCfHp5L.b7zE9CVBuh2neJYiBidh3ab/xX3IHFuXBrnXg5ma", admin: false},
   {username: "mist", email: "misty@moo.com", password_digest: "$2a$10$94aPVVutLtOtgfgCQBYMd.Ym1umyqD/7W6jw0gJeVWQKJmrujF2ga", admin: false}
 ])
