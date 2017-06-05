@@ -1,3 +1,9 @@
+User.create!([
+  {username: "Libby", email: "libbysk@gmail.com", password_digest: "$2a$10$7RJ8XWp1n3ETrXhfvU.auuYp57s59RQpgn12n508TOOKg5U4lPVbO", admin: false},
+  {username: "jess", email: "jess@moo.com", password_digest: "$2a$10$DmU8jZCfHp5L.b7zE9CVBuh2neJYiBidh3ab/xX3IHFuXBrnXg5ma", admin: false},
+  {username: "mist", email: "misty@moo.com", password_digest: "$2a$10$94aPVVutLtOtgfgCQBYMd.Ym1umyqD/7W6jw0gJeVWQKJmrujF2ga", admin: false}
+])
+
 SurfSpot.create!([
   {name: "Lyall Bay", description: "Surf is great when it is on. The Airport End is where I surf the most and has a break of the wall. Other parts of the beach can be good at times.\r\nSoutherly swell, northerly wind.", place: "Wellington", region: "Wellington", country: "New Zealand", latitude: -41.328796, longitude: 174.803866, stoke_rating: 5, user_id: 1},
   {name: " Uretiti Beach", description: "This beach is in Bream Bay. Discovered while camping at the DOC campsite. Pretty cool surf beach for beginners, kind of where I first got into it. Oh and in summer it is nice and warm!!", place: "Bream bay", region: "Northland", country: "New Zealand", latitude: -35.934883, longitude: 174.462012, stoke_rating: 4, user_id: 1},
@@ -7,9 +13,4 @@ SurfSpot.create!([
   {name: "Ngarunui Beach", description: "Ngarunui Beach at Raglan is a beach break on a sandy beach. There are various peaks to choose from along the beach. The wave offers both right and left handers, and can get good hollow barrels with a bit of power. Best on a higher tide. Good for beginners to expert surfers.", place: "Raglan", region: "Waikato", country: "New Zealand", latitude: -37.818491, longitude: 174.82823, stoke_rating: 8, user_id: 1},
   {name: "Otaki Beach", description: "Otaki Beach is a beach break on a sandy beach. Otaki has several peaks along the beach to choose from with both right and left handers. The wave is small and soft, great for beginners.", place: "Otaki", region: "Horowhenua", country: "New Zealand", latitude: -40.73661, longitude: 175.115652, stoke_rating: 4, user_id: 1},
   {name: "Westward Ho!", description: "Slow, crumbly, beginner-friendly waves. Car park by the beach and plenty of facilities.", place: "Westward Ho!", region: "North Devon", country: "England", latitude: 51.052082, longitude: -4.236023, stoke_rating: 4, user_id: 1}
-])
-User.create!([
-  {username: "Libby", email: "libbysk@gmail.com", password_digest: "$2a$10$7RJ8XWp1n3ETrXhfvU.auuYp57s59RQpgn12n508TOOKg5U4lPVbO", admin: false},
-  {username: "jess", email: "jess@moo.com", password_digest: "$2a$10$DmU8jZCfHp5L.b7zE9CVBuh2neJYiBidh3ab/xX3IHFuXBrnXg5ma", admin: false},
-  {username: "mist", email: "misty@moo.com", password_digest: "$2a$10$94aPVVutLtOtgfgCQBYMd.Ym1umyqD/7W6jw0gJeVWQKJmrujF2ga", admin: false}
 ])
